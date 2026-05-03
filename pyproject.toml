@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "signalevalrunner"
-version = "0.1.1"
+version = "0.2.0"
 description = "Provider-agnostic CLI runner for financial news-to-signal model evaluation"
 readme = "README.md"
 license = {text = "Apache-2.0"}

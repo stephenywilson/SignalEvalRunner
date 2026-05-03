@@ -1,0 +1,19 @@
+{
+  "model": "simple-baseline",
+  "provider": "file",
+  "dataset": "demo",
+  "created_at": "2026-05-03T12:00:00Z",
+  "notes": "Sample — deterministic keyword-based baseline for calibration purposes. Not a real model.",
+  "scores": {
+    "overall": 0.62,
+    "direction_accuracy": 0.60,
+    "event_type_accuracy": 0.68,
+    "asset_match": 0.58,
+    "time_horizon_match": 0.61
+  },
+  "counts": {
+    "total": 20,
+    "passed": 12,
+    "failed": 8
+  }
+}

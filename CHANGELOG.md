@@ -4,6 +4,34 @@ All notable changes to SignalEval Runner are documented here.
 
 ---
 
+## [0.2.0] — 2026-05-03
+
+### Static Board Export
+
+**New CLI command:** `signaleval board --input <dir> --output <dir>`
+
+Generates a self-contained static HTML leaderboard from evaluation result JSON files.
+
+**New modules:**
+- `signaleval/board/parser.py` — tolerant JSON parser; supports full and simple fallback formats
+- `signaleval/board/builder.py` — sorts entries by overall score, assigns ranks
+- `signaleval/board/render.py` — generates `index.html`, `assets/style.css`, `data/leaderboard.json`
+
+**New example data:**
+- `examples/runs/oracle-baseline.json` — near-perfect upper bound (sample)
+- `examples/runs/local-model-sample.json` — mid-range local LLM profile (sample)
+- `examples/runs/simple-baseline.json` — keyword-based calibration baseline (sample)
+
+**New docs:**
+- `docs/board.md` — command reference, input format, deployment guide
+
+**Other:**
+- Version bumped to `0.2.0`
+- README updated with Static Board Export section
+- Smoke test updated to verify board output
+
+---
+
 ## [0.1.1] — 2026-05-03
 
 ### Release hardening pass

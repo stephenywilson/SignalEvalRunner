@@ -103,6 +103,23 @@ signaleval score \
   --dataset "$DEMO_DATASET" \
   --predictions "$PROJECT_DIR/examples/predictions/imperfect_predictions.jsonl"
 
+# board command
+echo ""
+echo "--- signaleval board ---"
+BOARD_OUT="$TMPDIR/board-test"
+signaleval board \
+  --input "$PROJECT_DIR/examples/runs" \
+  --output "$BOARD_OUT"
+test -f "$BOARD_OUT/index.html"              && echo "board index.html created OK"
+test -f "$BOARD_OUT/assets/style.css"        && echo "board style.css created OK"
+test -f "$BOARD_OUT/data/leaderboard.json"   && echo "board leaderboard.json created OK"
+grep -q "SignalEvalRunner Board"             "$BOARD_OUT/index.html" && echo "board header OK"
+grep -q "Research only"                      "$BOARD_OUT/index.html" && echo "board disclaimer OK"
+grep -q "simple-baseline\|oracle-baseline\|local-llm-sample" \
+                                             "$BOARD_OUT/index.html" && echo "board models OK"
+RANK1=$(python3 -c "import json; d=json.load(open('$BOARD_OUT/data/leaderboard.json')); print(d['rows'][0]['model'])")
+echo "board rank-1 model: $RANK1"
+
 echo ""
 echo "========================================"
 echo "  Smoke test PASSED"

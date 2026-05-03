@@ -1,0 +1,20 @@
+{
+  "model": "oracle-baseline",
+  "provider": "file",
+  "dataset": "demo",
+  "created_at": "2026-05-03T12:00:00Z",
+  "notes": "Sample — theoretical upper bound (ground-truth labels fed back as predictions). Not a real model.",
+  "scores": {
+    "overall": 0.97,
+    "direction_accuracy": 0.95,
+    "event_type_accuracy": 1.00,
+    "asset_match": 0.95,
+    "time_horizon_match": 0.95,
+    "reasoning_quality": 0.90
+  },
+  "counts": {
+    "total": 20,
+    "passed": 19,
+    "failed": 1
+  }
+}

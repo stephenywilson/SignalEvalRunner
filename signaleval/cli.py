@@ -118,6 +118,37 @@ def cmd_report(args):
     print(f"Report written to {output_path}")
 
 
+def cmd_board(args):
+    from .board import load_runs_from_dir, build_leaderboard, write_site
+    from datetime import datetime
+
+    input_dir = Path(args.input)
+    output_dir = Path(args.output)
+
+    try:
+        entries, warnings = load_runs_from_dir(input_dir)
+    except (FileNotFoundError, ValueError) as ex:
+        print(f"Error: {ex}", file=sys.stderr)
+        sys.exit(1)
+
+    for w in warnings:
+        print(f"Warning: {w}", file=sys.stderr)
+
+    rows = build_leaderboard(entries)
+    generated_at = datetime.utcnow().strftime("%Y-%m-%dT%H:%M UTC")
+
+    try:
+        write_site(rows, output_dir, generated_at)
+    except OSError as ex:
+        print(f"Error writing output: {ex}", file=sys.stderr)
+        sys.exit(1)
+
+    print(f"Board generated: {output_dir / 'index.html'}")
+    print(f"  Runs included: {len(rows)}")
+    print(f"  CSS:           {output_dir / 'assets' / 'style.css'}")
+    print(f"  Data:          {output_dir / 'data' / 'leaderboard.json'}")
+
+
 def cmd_providers(args):
     print("\nSignalEval Providers\n" + "=" * 40)
     providers_info = [
@@ -178,6 +209,12 @@ def build_parser() -> argparse.ArgumentParser:
     # providers
     p_prov = sub.add_parser("providers", help="List supported providers")
     p_prov.set_defaults(func=cmd_providers)
+
+    # board
+    p_board = sub.add_parser("board", help="Generate static HTML leaderboard from run JSON files")
+    p_board.add_argument("--input", required=True, help="Directory containing run result JSON files")
+    p_board.add_argument("--output", required=True, help="Output directory for generated site")
+    p_board.set_defaults(func=cmd_board)
 
     return parser
 

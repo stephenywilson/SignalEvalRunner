@@ -1,0 +1,20 @@
+{
+  "model": "local-llm-sample",
+  "provider": "ollama",
+  "dataset": "demo",
+  "created_at": "2026-05-03T12:00:00Z",
+  "notes": "Sample — representative local LLM performance profile on the demo dataset. Not a real model run.",
+  "scores": {
+    "overall": 0.76,
+    "direction_accuracy": 0.75,
+    "event_type_accuracy": 0.80,
+    "asset_match": 0.70,
+    "time_horizon_match": 0.72,
+    "reasoning_quality": 0.74
+  },
+  "counts": {
+    "total": 20,
+    "passed": 15,
+    "failed": 5
+  }
+}
