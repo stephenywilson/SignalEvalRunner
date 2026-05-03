@@ -14,6 +14,10 @@ It is designed to work with News2SignalBench-style datasets and can evaluate pre
 
 ---
 
+![SignalEval Runner terminal demo](docs/assets/signalevalrunner-demo.svg)
+
+---
+
 ## Table of Contents
 
 1. [What is SignalEval Runner?](#what-is-signaleval-runner)
@@ -82,7 +86,7 @@ SignalEval Runner is compatible with any dataset that follows the News2SignalBen
 
 ```bash
 # Clone and install
-git clone https://github.com/catalayer/SignalEvalRunner
+git clone https://github.com/stephenywilson/SignalEvalRunner
 cd SignalEvalRunner
 
 python3 -m venv .venv

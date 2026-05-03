@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="960" height="540" viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg">
+
+  <!-- Terminal card background -->
+  <rect width="960" height="540" rx="12" fill="#0d1117"/>
+
+  <!-- Title bar -->
+  <rect width="960" height="44" rx="12" fill="#161b22"/>
+  <rect y="26" width="960" height="18" fill="#161b22"/>
+
+  <!-- Window controls -->
+  <circle cx="26" cy="22" r="7" fill="#ff5f57"/>
+  <circle cx="50" cy="22" r="7" fill="#febc2e"/>
+  <circle cx="74" cy="22" r="7" fill="#28c840"/>
+
+  <!-- Title bar label -->
+  <text x="480" y="22"
+        font-family="'Consolas','Monaco','Menlo','Courier New',monospace"
+        font-size="13" fill="#8b949e" text-anchor="middle" dominant-baseline="middle">
+    SignalEval Runner — terminal demo
+  </text>
+
+  <!-- ── Section 1: validate ─────────────────────────────────────── -->
+
+  <!-- $ signaleval validate -->
+  <text x="24" y="80"
+        font-family="'Consolas','Monaco','Menlo','Courier New',monospace"
+        font-size="13.5">
+    <tspan fill="#79c0ff">$</tspan><tspan fill="#c9d1d9"> signaleval validate </tspan><tspan fill="#8b949e">--dataset examples/datasets/demo.jsonl</tspan>
+  </text>
+
+  <!-- success output -->
+  <text x="24" y="102"
+        font-family="'Consolas','Monaco','Menlo','Courier New',monospace"
+        font-size="13.5">
+    <tspan fill="#3fb950">  ✓  </tspan><tspan fill="#c9d1d9">20 rows loaded · 0 invalid rows</tspan>
+  </text>
+
+  <!-- ── Section 2: score ────────────────────────────────────────── -->
+
+  <!-- $ signaleval score line 1 -->
+  <text x="24" y="136"
+        font-family="'Consolas','Monaco','Menlo','Courier New',monospace"
+        font-size="13.5">
+    <tspan fill="#79c0ff">$</tspan><tspan fill="#c9d1d9"> signaleval score </tspan><tspan fill="#8b949e">--dataset examples/datasets/demo.jsonl \</tspan>
+  </text>
+
+  <!-- $ signaleval score line 2 (continuation) -->
+  <text x="24" y="158"
+        font-family="'Consolas','Monaco','Menlo','Courier New',monospace"
+        font-size="13.5" fill="#8b949e">
+        --predictions examples/predictions/sample_predictions.jsonl
+  </text>
+
+  <!-- metrics block -->
+  <text x="48" y="192"
+        font-family="'Consolas','Monaco','Menlo','Courier New',monospace"
+        font-size="13.5">
+    <tspan fill="#c9d1d9">Direction accuracy:   </tspan><tspan fill="#79c0ff">90.0%</tspan>
+  </text>
+
+  <text x="48" y="214"
+        font-family="'Consolas','Monaco','Menlo','Courier New',monospace"
+        font-size="13.5">
+    <tspan fill="#c9d1d9">Event type accuracy:  </tspan><tspan fill="#79c0ff">100.0%</tspan>
+  </text>
+
+  <text x="48" y="236"
+        font-family="'Consolas','Monaco','Menlo','Courier New',monospace"
+        font-size="13.5">
+    <tspan fill="#c9d1d9">Time horizon acc:     </tspan><tspan fill="#79c0ff">100.0%</tspan>
+  </text>
+
+  <text x="48" y="258"
+        font-family="'Consolas','Monaco','Menlo','Courier New',monospace"
+        font-size="13.5">
+    <tspan fill="#c9d1d9">Confidence match:     </tspan><tspan fill="#79c0ff">100.0%</tspan>
+  </text>
+
+  <!-- separator -->
+  <line x1="48" y1="272" x2="380" y2="272" stroke="#30363d" stroke-width="1"/>
+
+  <!-- macro score (highlighted) -->
+  <text x="48" y="292"
+        font-family="'Consolas','Monaco','Menlo','Courier New',monospace"
+        font-size="13.5" font-weight="bold">
+    <tspan fill="#c9d1d9">Macro score:          </tspan><tspan fill="#e3b341">98.0%</tspan>
+  </text>
+
+  <!-- ── Section 3: run ─────────────────────────────────────────── -->
+
+  <!-- $ signaleval run line 1 -->
+  <text x="24" y="326"
+        font-family="'Consolas','Monaco','Menlo','Courier New',monospace"
+        font-size="13.5">
+    <tspan fill="#79c0ff">$</tspan><tspan fill="#c9d1d9"> signaleval run </tspan><tspan fill="#8b949e">--provider mock \</tspan>
+  </text>
+
+  <!-- run line 2 -->
+  <text x="24" y="348"
+        font-family="'Consolas','Monaco','Menlo','Courier New',monospace"
+        font-size="13.5" fill="#8b949e">
+        --dataset examples/datasets/demo.jsonl --output .signaleval/outputs/mock_predictions.jsonl
+  </text>
+
+  <!-- run success -->
+  <text x="24" y="370"
+        font-family="'Consolas','Monaco','Menlo','Courier New',monospace"
+        font-size="13.5">
+    <tspan fill="#3fb950">  ✓  </tspan><tspan fill="#c9d1d9">Wrote 20 predictions to .signaleval/outputs/mock_predictions.jsonl</tspan>
+  </text>
+
+  <!-- ── Section 4: report ──────────────────────────────────────── -->
+
+  <!-- $ signaleval report line 1 -->
+  <text x="24" y="404"
+        font-family="'Consolas','Monaco','Menlo','Courier New',monospace"
+        font-size="13.5">
+    <tspan fill="#79c0ff">$</tspan><tspan fill="#c9d1d9"> signaleval report </tspan><tspan fill="#8b949e">--dataset examples/datasets/demo.jsonl \</tspan>
+  </text>
+
+  <!-- report line 2 -->
+  <text x="24" y="426"
+        font-family="'Consolas','Monaco','Menlo','Courier New',monospace"
+        font-size="13.5" fill="#8b949e">
+        --output .signaleval/reports/sample-report.md
+  </text>
+
+  <!-- report success -->
+  <text x="24" y="448"
+        font-family="'Consolas','Monaco','Menlo','Courier New',monospace"
+        font-size="13.5">
+    <tspan fill="#3fb950">  ✓  </tspan><tspan fill="#c9d1d9">Report saved to .signaleval/reports/sample-report.md</tspan>
+  </text>
+
+  <!-- ── Footer disclaimer ──────────────────────────────────────── -->
+  <text x="24" y="498"
+        font-family="'Consolas','Monaco','Menlo','Courier New',monospace"
+        font-size="12.5" fill="#8b949e">
+    # Research only. Not financial advice. No trading execution.
+  </text>
+
+</svg>

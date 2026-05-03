@@ -33,8 +33,8 @@ dependencies = []
 signaleval = "signaleval.cli:main"
 
 [project.urls]
-"Source Code" = "https://github.com/catalayer/SignalEvalRunner"
-"Bug Tracker" = "https://github.com/catalayer/SignalEvalRunner/issues"
+"Source Code" = "https://github.com/stephenywilson/SignalEvalRunner"
+"Bug Tracker" = "https://github.com/stephenywilson/SignalEvalRunner/issues"
 
 [tool.setuptools.packages.find]
 where = ["."]

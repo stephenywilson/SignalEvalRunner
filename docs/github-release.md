@@ -77,7 +77,7 @@ pip install signalevalrunner
 or from source:
 
 ```bash
-git clone https://github.com/catalayer/SignalEvalRunner
+git clone https://github.com/stephenywilson/SignalEvalRunner
 cd SignalEvalRunner
 pip install -e .
 ```

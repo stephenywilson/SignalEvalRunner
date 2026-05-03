@@ -7,7 +7,7 @@ Thank you for your interest in contributing to SignalEval Runner.
 ## Development setup
 
 ```bash
-git clone https://github.com/catalayer/SignalEvalRunner
+git clone https://github.com/stephenywilson/SignalEvalRunner
 cd SignalEvalRunner
 python3 -m venv .venv
 source .venv/bin/activate
