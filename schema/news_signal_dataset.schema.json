@@ -1,0 +1,64 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/catalayer/SignalEvalRunner/schema/news_signal_dataset.schema.json",
+  "title": "NewsSignalDatasetRow",
+  "description": "Schema for a single row in a SignalEval news-to-signal dataset JSONL file.",
+  "type": "object",
+  "required": [
+    "id", "headline", "body", "asset", "asset_type", "event_type",
+    "expected_direction", "time_horizon", "confidence_label", "rationale"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique row identifier",
+      "minLength": 1
+    },
+    "headline": {
+      "type": "string",
+      "description": "News headline",
+      "minLength": 1
+    },
+    "body": {
+      "type": "string",
+      "description": "News body text"
+    },
+    "asset": {
+      "type": "string",
+      "description": "Asset ticker or identifier (e.g. SPY, BTC, AAPL)"
+    },
+    "asset_type": {
+      "type": "string",
+      "description": "Asset class (e.g. stock, etf, crypto, commodity, bond)"
+    },
+    "event_type": {
+      "type": "string",
+      "description": "Event category",
+      "enum": [
+        "central_bank", "earnings", "guidance", "inflation", "jobs",
+        "geopolitics", "regulation", "merger", "product_launch",
+        "supply_chain", "credit", "commodity", "crypto", "other"
+      ]
+    },
+    "expected_direction": {
+      "type": "string",
+      "description": "Ground truth market direction signal",
+      "enum": ["bullish", "bearish", "neutral", "mixed"]
+    },
+    "time_horizon": {
+      "type": "string",
+      "description": "Expected timeframe for the market impact",
+      "enum": ["intraday", "short_term", "medium_term", "long_term"]
+    },
+    "confidence_label": {
+      "type": "string",
+      "description": "Confidence level of the signal",
+      "enum": ["low", "medium", "high"]
+    },
+    "rationale": {
+      "type": "string",
+      "description": "Human rationale for the expected signal"
+    }
+  },
+  "additionalProperties": true
+}

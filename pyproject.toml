@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "signalevalrunner"
+version = "0.1.1"
+description = "Provider-agnostic CLI runner for financial news-to-signal model evaluation"
+readme = "README.md"
+license = {text = "Apache-2.0"}
+requires-python = ">=3.10"
+authors = [
+  {name = "Catalayer AI", email = "contact@catalayer.com"},
+]
+keywords = [
+  "llm-evaluation", "financial-news", "benchmark", "ai-evaluation",
+  "model-eval", "finance", "cli", "ollama", "openai", "anthropic",
+]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Science/Research",
+  "License :: OSI Approved :: Apache Software License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+  "Topic :: Office/Business :: Financial",
+]
+dependencies = []
+
+[project.scripts]
+signaleval = "signaleval.cli:main"
+
+[project.urls]
+"Source Code" = "https://github.com/catalayer/SignalEvalRunner"
+"Bug Tracker" = "https://github.com/catalayer/SignalEvalRunner/issues"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["signaleval*"]
+
+[tool.setuptools.package-data]
+signaleval = ["prompts/*.md"]

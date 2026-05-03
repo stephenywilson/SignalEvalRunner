@@ -1,0 +1,63 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/catalayer/SignalEvalRunner/schema/news_signal_prediction.schema.json",
+  "title": "NewsSignalPredictionRow",
+  "description": "Schema for a single row in a SignalEval prediction JSONL file.",
+  "type": "object",
+  "required": [
+    "id", "predicted_direction", "predicted_event_type",
+    "predicted_time_horizon", "predicted_confidence", "reasoning"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Row id matching the dataset row",
+      "minLength": 1
+    },
+    "predicted_direction": {
+      "type": "string",
+      "description": "Model predicted direction",
+      "enum": ["bullish", "bearish", "neutral", "mixed"]
+    },
+    "predicted_event_type": {
+      "type": "string",
+      "description": "Model predicted event type",
+      "enum": [
+        "central_bank", "earnings", "guidance", "inflation", "jobs",
+        "geopolitics", "regulation", "merger", "product_launch",
+        "supply_chain", "credit", "commodity", "crypto", "other"
+      ]
+    },
+    "predicted_time_horizon": {
+      "type": "string",
+      "description": "Model predicted time horizon",
+      "enum": ["intraday", "short_term", "medium_term", "long_term"]
+    },
+    "predicted_confidence": {
+      "type": "string",
+      "description": "Model predicted confidence level",
+      "enum": ["low", "medium", "high"]
+    },
+    "reasoning": {
+      "type": "string",
+      "description": "Model reasoning for the prediction"
+    },
+    "predicted_asset": {
+      "type": "string",
+      "description": "Optional: model predicted asset (if different)"
+    },
+    "model": {
+      "type": "string",
+      "description": "Model name or identifier"
+    },
+    "provider": {
+      "type": "string",
+      "description": "Provider used to generate prediction"
+    },
+    "raw_output": {
+      "type": "string",
+      "description": "Raw model output before parsing"
+    }
+  },
+  "additionalProperties": true
+}
