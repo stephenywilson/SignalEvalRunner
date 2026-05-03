@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="960" height="520" viewBox="0 0 960 520" xmlns="http://www.w3.org/2000/svg">
+
+  <!-- Card background -->
+  <rect width="960" height="520" rx="12" fill="#0d1117"/>
+
+  <!-- Title bar -->
+  <rect width="960" height="42" rx="12" fill="#161b22"/>
+  <rect y="26" width="960" height="16" fill="#161b22"/>
+
+  <!-- Window controls -->
+  <circle cx="26" cy="21" r="7" fill="#ff5f57"/>
+  <circle cx="50" cy="21" r="7" fill="#febc2e"/>
+  <circle cx="74" cy="21" r="7" fill="#28c840"/>
+
+  <!-- Title bar label -->
+  <text x="480" y="21"
+        font-family="'Consolas','Monaco','Menlo','Courier New',monospace"
+        font-size="13" fill="#8b949e" text-anchor="middle" dominant-baseline="middle">
+    signaleval board --input examples/runs --output site-demo
+  </text>
+
+  <!-- ── Page heading ─────────────────────────────────────────────── -->
+  <text x="28" y="76"
+        font-family="-apple-system,'Segoe UI',Helvetica,Arial,sans-serif"
+        font-size="22" font-weight="700" fill="#e6edf3">
+    SignalEvalRunner Board
+  </text>
+
+  <text x="28" y="98"
+        font-family="-apple-system,'Segoe UI',Helvetica,Arial,sans-serif"
+        font-size="13" fill="#8b949e">
+    Static leaderboard for financial news-to-signal model evaluation.
+  </text>
+
+  <!-- Disclaimer badge -->
+  <rect x="28" y="110" width="366" height="22" rx="5" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+  <text x="36" y="125"
+        font-family="-apple-system,'Segoe UI',Helvetica,Arial,sans-serif"
+        font-size="11" fill="#8b949e">
+    Research only. Not financial advice. No trading execution.
+  </text>
+
+  <!-- ── Table ─────────────────────────────────────────────────────── -->
+
+  <!-- Table header background -->
+  <rect x="0" y="148" width="960" height="36" fill="#21262d"/>
+
+  <!-- Table header text -->
+  <text font-family="-apple-system,'Segoe UI',Helvetica,Arial,sans-serif"
+        font-size="11" font-weight="600" fill="#8b949e"
+        text-transform="uppercase" letter-spacing="0.05em">
+    <tspan x="28"  y="172">RANK</tspan>
+    <tspan x="88"  y="172">MODEL</tspan>
+    <tspan x="298" y="172">PROVIDER</tspan>
+    <tspan x="418" y="172">OVERALL</tspan>
+    <tspan x="518" y="172">DIRECTION</tspan>
+    <tspan x="622" y="172">EVENT TYPE</tspan>
+    <tspan x="752" y="172">ASSET MATCH</tspan>
+  </text>
+
+  <!-- ── Row 1: oracle-baseline ──────────────────────────────────── -->
+  <rect x="0" y="184" width="960" height="46" fill="#161b22"/>
+
+  <!-- Rank 1 badge -->
+  <circle cx="46" cy="207" r="13" fill="#b8860b"/>
+  <text x="46" y="212" font-family="-apple-system,'Segoe UI',Helvetica,Arial,sans-serif"
+        font-size="12" font-weight="700" fill="#fff" text-anchor="middle">1</text>
+
+  <!-- Model name -->
+  <text x="88" y="212"
+        font-family="-apple-system,'Segoe UI',Helvetica,Arial,sans-serif"
+        font-size="13.5" font-weight="600" fill="#c9d1d9">oracle-baseline</text>
+
+  <!-- Provider -->
+  <text x="298" y="212"
+        font-family="-apple-system,'Segoe UI',Helvetica,Arial,sans-serif"
+        font-size="13" fill="#8b949e">file</text>
+
+  <!-- Scores -->
+  <text x="418" y="212"
+        font-family="-apple-system,'Segoe UI',Helvetica,Arial,sans-serif"
+        font-size="13" font-weight="600" fill="#3fb950">97.0%</text>
+  <text x="518" y="212"
+        font-family="-apple-system,'Segoe UI',Helvetica,Arial,sans-serif"
+        font-size="13" fill="#3fb950">95.0%</text>
+  <text x="622" y="212"
+        font-family="-apple-system,'Segoe UI',Helvetica,Arial,sans-serif"
+        font-size="13" fill="#3fb950">100.0%</text>
+  <text x="752" y="212"
+        font-family="-apple-system,'Segoe UI',Helvetica,Arial,sans-serif"
+        font-size="13" fill="#3fb950">95.0%</text>
+
+  <!-- ── Row 2: local-model-sample ───────────────────────────────── -->
+  <!-- Row 2 background same as card (#0d1117) — no rect needed -->
+  <line x1="0" y1="230" x2="960" y2="230" stroke="#21262d" stroke-width="1"/>
+
+  <!-- Rank 2 badge -->
+  <circle cx="46" cy="253" r="13" fill="#6e7681"/>
+  <text x="46" y="258" font-family="-apple-system,'Segoe UI',Helvetica,Arial,sans-serif"
+        font-size="12" font-weight="700" fill="#fff" text-anchor="middle">2</text>
+
+  <!-- Model name -->
+  <text x="88" y="258"
+        font-family="-apple-system,'Segoe UI',Helvetica,Arial,sans-serif"
+        font-size="13.5" font-weight="600" fill="#c9d1d9">local-llm-sample</text>
+
+  <!-- Provider -->
+  <text x="298" y="258"
+        font-family="-apple-system,'Segoe UI',Helvetica,Arial,sans-serif"
+        font-size="13" fill="#8b949e">ollama</text>
+
+  <!-- Scores -->
+  <text x="418" y="258"
+        font-family="-apple-system,'Segoe UI',Helvetica,Arial,sans-serif"
+        font-size="13" font-weight="600" fill="#3fb950">76.0%</text>
+  <text x="518" y="258"
+        font-family="-apple-system,'Segoe UI',Helvetica,Arial,sans-serif"
+        font-size="13" fill="#3fb950">75.0%</text>
+  <text x="622" y="258"
+        font-family="-apple-system,'Segoe UI',Helvetica,Arial,sans-serif"
+        font-size="13" fill="#3fb950">80.0%</text>
+  <text x="752" y="258"
+        font-family="-apple-system,'Segoe UI',Helvetica,Arial,sans-serif"
+        font-size="13" fill="#e3b341">70.0%</text>
+
+  <!-- ── Row 3: simple-baseline ──────────────────────────────────── -->
+  <rect x="0" y="276" width="960" height="46" fill="#161b22"/>
+  <line x1="0" y1="276" x2="960" y2="276" stroke="#21262d" stroke-width="1"/>
+
+  <!-- Rank 3 badge -->
+  <circle cx="46" cy="299" r="13" fill="#7b3f00"/>
+  <text x="46" y="304" font-family="-apple-system,'Segoe UI',Helvetica,Arial,sans-serif"
+        font-size="12" font-weight="700" fill="#fff" text-anchor="middle">3</text>
+
+  <!-- Model name -->
+  <text x="88" y="304"
+        font-family="-apple-system,'Segoe UI',Helvetica,Arial,sans-serif"
+        font-size="13.5" font-weight="600" fill="#c9d1d9">simple-baseline</text>
+
+  <!-- Provider -->
+  <text x="298" y="304"
+        font-family="-apple-system,'Segoe UI',Helvetica,Arial,sans-serif"
+        font-size="13" fill="#8b949e">file</text>
+
+  <!-- Scores -->
+  <text x="418" y="304"
+        font-family="-apple-system,'Segoe UI',Helvetica,Arial,sans-serif"
+        font-size="13" font-weight="600" fill="#e3b341">62.0%</text>
+  <text x="518" y="304"
+        font-family="-apple-system,'Segoe UI',Helvetica,Arial,sans-serif"
+        font-size="13" fill="#e3b341">60.0%</text>
+  <text x="622" y="304"
+        font-family="-apple-system,'Segoe UI',Helvetica,Arial,sans-serif"
+        font-size="13" fill="#e3b341">68.0%</text>
+  <text x="752" y="304"
+        font-family="-apple-system,'Segoe UI',Helvetica,Arial,sans-serif"
+        font-size="13" fill="#f85149">58.0%</text>
+
+  <!-- Table bottom border -->
+  <line x1="0" y1="322" x2="960" y2="322" stroke="#30363d" stroke-width="1"/>
+
+  <!-- ── About blurb ───────────────────────────────────────────────── -->
+  <text x="28" y="358"
+        font-family="-apple-system,'Segoe UI',Helvetica,Arial,sans-serif"
+        font-size="12.5" fill="#6e7681">
+    SignalEvalRunner evaluates whether models can convert market-moving news into structured signal
+  </text>
+  <text x="28" y="376"
+        font-family="-apple-system,'Segoe UI',Helvetica,Arial,sans-serif"
+        font-size="12.5" fill="#6e7681">
+    predictions. The board is generated from local evaluation result files — no model provider is called.
+  </text>
+
+  <!-- ── Footer separator and text ─────────────────────────────────── -->
+  <line x1="28" y1="412" x2="932" y2="412" stroke="#21262d" stroke-width="1"/>
+
+  <text x="28" y="432"
+        font-family="-apple-system,'Segoe UI',Helvetica,Arial,sans-serif"
+        font-size="11.5" fill="#6e7681">
+    Generated by SignalEvalRunner · Research only · Not financial advice · No trading execution
+  </text>
+
+</svg>

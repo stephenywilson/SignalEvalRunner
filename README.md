@@ -30,9 +30,10 @@ It is designed to work with News2SignalBench-style datasets and can evaluate pre
 8. [Providers](#providers)
 9. [Metrics](#metrics)
 10. [Example report](#example-report)
-11. [Roadmap](#roadmap)
-12. [Important limitations](#important-limitations)
-13. [License](#license)
+11. [Static Board Export](#static-board-export)
+12. [Roadmap](#roadmap)
+13. [Important limitations](#important-limitations)
+14. [License](#license)
 
 ---
 
@@ -122,6 +123,9 @@ signaleval run \
 
 # Run the full pre-release check (no external API calls)
 bash scripts/check_release.sh
+
+# Generate a static leaderboard (v0.2+)
+signaleval board --input examples/runs --output site-demo
 ```
 
 ---
@@ -393,6 +397,8 @@ signaleval board --input examples/runs --output site-demo
 ```
 
 The generated site is fully static and can be opened locally (`open site-demo/index.html`) or deployed to GitHub Pages.
+
+![SignalEvalRunner static board demo](docs/assets/signal-board-demo.svg)
 
 See [`docs/board.md`](docs/board.md) for the full input format reference and deployment guide.
 
